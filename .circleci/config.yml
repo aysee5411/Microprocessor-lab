@@ -1,0 +1,22 @@
+	float x, next, e;
+	do
+	{
+		next = 1.0;
+		e = 1.0;
+		i = 1;
+		printf("enter a value for x:\n");
+		scanf("%f", &x);
+		while (i < 100)
+		{
+			next = x / i * next;
+			e = e + next;
+			i++;
+		}
+		printf("e raised to power %f=%f\n", x, e);
+		printf("do you wish to try another ([0=no, 1=yes] ?:\n");
+		scanf("%d", &response);
+	}
+	while(response == 1);
+	
+	return 0;
+}
